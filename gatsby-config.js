@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: `gatsby-source-rss-feed`,
       options: {
-        url: `http://feeds.soundcloud.com/users/soundcloud:users:378794924/sounds.rss`,
+        url: `https://feeds.soundcloud.com/users/soundcloud:users:378794924/sounds.rss`,
         name: `ComicBoxRumble`,
       },
     },

@@ -10,6 +10,8 @@ const Player = props => {
   const { data, id } = props
   const audio = useRef()
   const [playing, setPlaying] = useState(false)
+  console.log(audio)
+  console.log(data.itunes.image)
 
   function start() {
     setPlaying(true)
