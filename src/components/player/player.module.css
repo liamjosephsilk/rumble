@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.player {
+  position: relative;
+  height: fit-content;
+}
+
+.buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98.5%;
+  background: black;
+  opacity: 0.6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  height: 50%;
+  width: 50%;
+  outline: none;
+  background: none;
+  border: none;
+}
+.button:focus {
+  outline: none;
+  background: none;
+}
+
+.button:hover {
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+
+.image {
+  margin: 0;
+}
+button {
+  color: white;
+}
+
+.information {
+  width: 100%;
+}
+.title {
+  margin-top: 0.5rem;
+}
+
+.button__image {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    margin-bottom: 1rem;
+  }
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+  .information {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .buttons {
+    opacity: 0;
+    transition: 300ms ease-in-out;
+    height: 96.5%;
+  }
+  .buttons:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    outline: none;
+  }
+}

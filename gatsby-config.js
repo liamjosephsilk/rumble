@@ -7,6 +7,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `http://feeds.soundcloud.com/users/soundcloud:users:378794924/sounds.rss`,
+        name: `ComicBoxRumble`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
