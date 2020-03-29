@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Comic Box Rumble`,
+    description: `Every week Kofi, Jack & Thom report on comic books, pop culture and ALLLLLLL the goodness in between! Whoever gives the best report puts a prize in the box which we giveaway for FREE....cause we're dope like that.
+
+    NEW EPISODES EVERY MONDAY OR SUE US!!!!`,
+    author: `Comic Box Rumble`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

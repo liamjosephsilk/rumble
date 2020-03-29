@@ -10,8 +10,6 @@ const Player = props => {
   const { data, id } = props
   const audio = useRef()
   const [playing, setPlaying] = useState(false)
-  console.log(audio)
-  console.log(data.itunes.image)
 
   function start() {
     setPlaying(true)
@@ -33,7 +31,12 @@ const Player = props => {
       ></audio>
       <div className={playerStyles.player}>
         <div>
-          <img src={data.itunes.image} className={playerStyles.image} alt="" />
+          <img
+            src={data.itunes.image}
+            className={playerStyles.image}
+            alt=""
+            loading="lazy"
+          />
         </div>
         <div className={playerStyles.buttons}>
           {playing ? (

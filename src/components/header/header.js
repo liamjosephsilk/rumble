@@ -16,10 +16,16 @@ const Header = ({ siteTitle }) => (
     <nav className={(headerStyles.flex__item, headerStyles.nav)}>
       <ul>
         <li>
-          <Link to="/page-2">About</Link>
+          <Link to="/about" activeClassName={headerStyles.active}>
+            About
+          </Link>
         </li>
         <span>/ </span>
-        <li>Episodes</li>
+        <li>
+          <Link to="/" activeClassName={headerStyles.active}>
+            Episodes
+          </Link>
+        </li>
         <span>/ </span>
         <li>Blog</li>
       </ul>
