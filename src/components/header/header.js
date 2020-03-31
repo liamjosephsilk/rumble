@@ -27,7 +27,11 @@ const Header = ({ siteTitle }) => (
           </Link>
         </li>
         <span>/ </span>
-        <li>Blog</li>
+        <li>
+          <Link to="/blog" activeClassName={headerStyles.active}>
+            Blog
+          </Link>
+        </li>
       </ul>
     </nav>
   </header>
