@@ -28,7 +28,6 @@ collections:
     label: "Creator"
     folder: "content/creators"
     create: true
-    slug: "{{slug}}"
     editor:
       preview: false
     fields:
@@ -42,3 +41,4 @@ collections:
           widget: "string",
           default: "blog-post",
         }
+      - { label: "Key", name: "key", widget: "string", default: "creators" }
