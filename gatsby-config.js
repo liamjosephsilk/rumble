@@ -41,13 +41,11 @@ module.exports = {
             resolve: `gatsby-remark-relative-images`,
             options: {
               name: "blog-images",
-              maxWidth: 200,
             },
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
-              name: "blog-images",
               maxWidth: 200,
             },
           },
