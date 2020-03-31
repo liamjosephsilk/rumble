@@ -3,17 +3,22 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 
+import blogStyles from "./blogpost.module.css"
+
 export default function Template({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
   return (
     <Layout>
-      <div>
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: html }}></div>
-      </div>
+      <section>
+        <h1 className={blogStyles.title}>{frontmatter.title}</h1>
+        <h2 className={blogStyles.date}>{frontmatter.date}</h2>
+        <article
+          className={blogStyles.post}
+          dangerouslySetInnerHTML={{ __html: html }}
+        ></article>
+      </section>
     </Layout>
   )
 }

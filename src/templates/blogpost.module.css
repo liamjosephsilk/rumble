@@ -1,0 +1,23 @@
+.date {
+  font-size: 0.8rem;
+  color: #999999;
+}
+
+.post a {
+  text-decoration: underline;
+  font-weight: 700;
+  color: #999999;
+  transition: 300ms ease-in-out;
+}
+
+.post a:hover {
+  color: white;
+  background: black;
+}
+
+.post blockquote {
+  border-left: 4px solid #999999;
+  padding: 1rem 2rem;
+  color: #999999;
+  font-style: italic;
+}

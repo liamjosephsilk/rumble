@@ -31,7 +31,9 @@ const Blog = () => {
       <h1>Blog</h1>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div>
-          <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+          <h2>
+            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+          </h2>
         </div>
       ))}
     </Layout>
