@@ -30,11 +30,12 @@ const Blog = () => {
       <SEO title="Blog" />
       <h1>Blog</h1>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div>
+        <section>
           <h2>
             <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
           </h2>
-        </div>
+          <h3>{node.frontmatter.date}</h3>
+        </section>
       ))}
     </Layout>
   )
