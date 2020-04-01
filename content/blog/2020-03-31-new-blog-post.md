@@ -16,4 +16,4 @@ Our first zine! To celebrate Ultimate Marvel’s 20th anniversary we take a look
 
 > all those twists... what was I thinking? - Sam Humphries
 
-`<iframe src="https://giphy.com/embed/QsIapJbN72RAV5Pw1F" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/QsIapJbN72RAV5Pw1F">via GIPHY</a></p>`
+`<iframe src="https://giphy.com/embed/QsIapJbN72RAV5Pw1F" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>`
