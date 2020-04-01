@@ -12,7 +12,7 @@ description: COMING SOON!
 
 ![Alt Text](/assets/gumroad.png "Tile for image")
 
-Our first zine! To celebrate Ultimate Marvel’s 20th anniversary we take a look at some of the early concepts, books trapped in development hell and those books which were announced but ultimately never saw the light of day. Featuring exclusive interviews and art from Sam Humphries, Michel Fiffe and Amilcar Pinna. Also expect coverage of early Ultimate X-Men, Bryan Singer, David Mack, Robert Kirkman, Grant Morrison, Steve McNiven, J.H. Williams III, David Finch and a whole host more! with some EXCLUSIVE comments from Sam Humphries (so far). More info soon
+Our first zine! To celebrate Ultimate Marvel’s 20th anniversary we take a look at some of the early concepts, books trapped in development hell and those books which were announced but ultimately never saw the light of day. Featuring exclusive interviews and art from Sam Humphries, Michel Fiffe and Amilcar Pinna. Also expect coverage of early Ultimate X-Men, Bryan Singer, David Mack, Robert Kirkman, Grant Morrison, Steve McNiven, J.H. Williams III, David Finch and a whole host more!  More info soon
 
 > all those twists... what was I thinking? - Sam Humphries
 
