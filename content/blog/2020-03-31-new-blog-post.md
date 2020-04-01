@@ -1,21 +1,19 @@
 ---
 templateKey: blog-post
-title: new blog post
+title: >-
+  Announcement - Zine - The Untold, Unpublished and Unfinished comics of the
+  Ultimate Universe
 date: 2020-03-31T14:14:45.656Z
-description: Description for blog post
+description: COMING SOON!
 ---
-## Heading for the blog post level 2
+## ANNOUNCEMENT - ZINE
 
-### Subheading level 3
+**The Untold, Unpublished and Unfinished comics of the Ultimate Universe**
 
-[Bork (1978)](https://www.amazon.co.uk/Antitrust-Paradox-Policy-War-Itself/dp/0029044561)notes in his book 'The Antitrust Paradox' that it is mistaken to view monopolies as bad in of themselves. Instead, we should only be concerned if they harm economic efficiency, that is if they hurt consumer welfare and/or prevent competitive innovation. This is important because legal intervention itself can have several unintended consequences. For example, California's AB5 statue, which was motivated to force Uber to treat drivers as employees, caused[severe redundancies](https://www.latimes.com/business/story/2019-12-17/vox-media-cuts-hundreds-freelancers-ab5)in freelance journalism.
+![Alt Text](/assets/gumroad.png "Tile for image")
 
-In our context of digital monopolies, we have already touched upon at least two reasons why digital monopolies do not harm consumer welfare: (1) Consumers depend on large scale monopolies to gain network effects; (2) Prices are already low/free whilst there numerous intangible benefits appear to exist
+Our first zine! To celebrate Ultimate Marvel’s 20th anniversary we take a look at some of the early concepts, books trapped in development hell and those books which were announced but ultimately never saw the light of day. Featuring exclusive interviews and art from Sam Humphries, Michel Fiffe and Amilcar Pinna. Also expect coverage of early Ultimate X-Men, Bryan Singer, David Mack, Robert Kirkman, Grant Morrison, Steve McNiven, J.H. Williams III, David Finch and a whole host more! with some EXCLUSIVE comments from Sam Humphries (so far). More info soon
 
-* list 1
-* list 2
-* list 3
+> all those twists... what was I thinking? - Sam Humphries
 
-> A dummy quote
-
-![Alt Text](/assets/food.jpg "Tile for image")
+`<iframe src="https://giphy.com/embed/QsIapJbN72RAV5Pw1F" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/QsIapJbN72RAV5Pw1F">via GIPHY</a></p>`
