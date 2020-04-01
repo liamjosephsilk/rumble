@@ -19,5 +19,5 @@ Our first zine! To celebrate Ultimate Marvel’s 20th anniversary we take a look
 `<iframe src="https://giphy.com/embed/QsIapJbN72RAV5Pw1F" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>`
 
 ```html
-`<iframe src="https://giphy.com/embed/QsIapJbN72RAV5Pw1F" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>`
+<iframe src="https://giphy.com/embed/QsIapJbN72RAV5Pw1F" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>`
 ```
