@@ -61,6 +61,8 @@ a {
 
 .mobilebutton {
   color: white;
+  background: none;
+  border: none;
 }
 .mobilebutton__span {
   box-sizing: border-box;

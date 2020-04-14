@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
+import Media from "react-media"
+
 import Nav from "./nav"
 import MobileNav from "./mobileNav"
 
@@ -7,16 +9,16 @@ import headerStyles from "./header.module.css"
 
 const Header = ({ siteTitle }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [width, setWidth] = useState(0)
-  const breakpoint = 768
+  // const [width, setWidth] = useState(0)
+  // const breakpoint = 768
 
-  useEffect(() => {
-    setWidth(window.innerWidth)
-    const handleWindowResize = () => setWidth(window.innerWidth)
-    window.addEventListener("resize", handleWindowResize)
+  // useEffect(() => {
+  //   setWidth(window.innerWidth)
+  //   const handleWindowResize = () => setWidth(window.innerWidth)
+  //   window.addEventListener("resize", handleWindowResize)
 
-    return () => window.removeEventListener("resize", handleWindowResize)
-  }, [])
+  //   return () => window.removeEventListener("resize", handleWindowResize)
+  // }, [])
 
   return (
     <header className={headerStyles.container}>
@@ -27,18 +29,24 @@ const Header = ({ siteTitle }) => {
           <p className={headerStyles.title}>rumble</p>
         </div>
       </Link>
-      {width < breakpoint ? (
-        <button
-          className={headerStyles.mobilebutton}
-          onClick={() => setIsOpen(true)}
-        >
-          <span className={headerStyles.mobilebutton__span}></span>
-          <span className={headerStyles.mobilebutton__span}></span>
-          <span className={headerStyles.mobilebutton__span}></span>
-        </button>
-      ) : (
-        <Nav />
-      )}
+
+      <Media queries={{ mobile: { minWidth: 768 } }}>
+        {matches =>
+          matches.mobile ? (
+            <Nav />
+          ) : (
+            <button
+              className={headerStyles.mobilebutton}
+              onClick={() => setIsOpen(true)}
+            >
+              <span className={headerStyles.mobilebutton__span}></span>
+              <span className={headerStyles.mobilebutton__span}></span>
+              <span className={headerStyles.mobilebutton__span}></span>
+            </button>
+          )
+        }
+      </Media>
+
       {isOpen ? (
         <MobileNav isOpen={isOpen} handleClick={() => setIsOpen(false)} />
       ) : (
