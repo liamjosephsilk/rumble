@@ -1,6 +1,6 @@
 ---
 templateKey: about-page
-title: This is the about page
+title: About
 ---
 
 The about page

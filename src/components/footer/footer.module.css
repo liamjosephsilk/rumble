@@ -1,7 +1,8 @@
 .footer {
-  background: black;
+  background: #222222;
   color: white;
   padding: 2rem;
+  margin-top: 4rem;
 }
 
 .container {
