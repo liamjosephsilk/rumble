@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1rem;
   flex-direction: column;
   justify-content: space-between;
@@ -65,6 +65,7 @@ button {
   .container {
     flex-direction: row;
     margin-bottom: 1rem;
+    align-items: center;
   }
   .image {
     width: 200px;

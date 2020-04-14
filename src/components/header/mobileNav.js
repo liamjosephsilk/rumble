@@ -25,6 +25,14 @@ const MobileNav = props => {
               Episodes
             </Link>
           </li>
+          <li>
+            <a
+              href="https://gumroad.com/rumblecomics/follow"
+              className={headerStyles.shopbuttonmobile}
+            >
+              Shop
+            </a>
+          </li>
         </ul>
         <button
           className={headerStyles.buttonclose}

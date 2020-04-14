@@ -9,17 +9,6 @@ import headerStyles from "./header.module.css"
 
 const Header = ({ siteTitle }) => {
   const [isOpen, setIsOpen] = useState(false)
-  // const [width, setWidth] = useState(0)
-  // const breakpoint = 768
-
-  // useEffect(() => {
-  //   setWidth(window.innerWidth)
-  //   const handleWindowResize = () => setWidth(window.innerWidth)
-  //   window.addEventListener("resize", handleWindowResize)
-
-  //   return () => window.removeEventListener("resize", handleWindowResize)
-  // }, [])
-
   return (
     <header className={headerStyles.container}>
       <Link to="/">

@@ -26,6 +26,7 @@
   margin: 0;
   width: 100%;
   font-size: 0.8rem;
+  align-items: center;
 }
 
 ul li {
@@ -91,11 +92,12 @@ a {
   flex-direction: column;
   justify-content: space-between;
   list-style: none;
-  height: 30%;
+  height: 50%;
 }
 
 .mobilenav ul li {
   font-size: 4rem;
+  width: 100%;
 }
 
 .buttonclose {
@@ -124,6 +126,29 @@ a {
 }
 .buttonclose__span:first-child {
   transform: rotate(-45deg);
+}
+
+.shopbutton {
+  background: black;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  color: white;
+}
+
+.shopbuttonmobile {
+  background: black;
+  border: none;
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 1rem 3rem;
+  color: white;
+  width: 100%;
+}
+
+.shopbutton:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

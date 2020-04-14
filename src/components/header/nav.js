@@ -24,6 +24,14 @@ const Nav = () => {
               Episodes
             </Link>
           </li>
+          <li>
+            <a
+              href="https://gumroad.com/rumblecomics/follow"
+              className={headerStyles.shopbutton}
+            >
+              Shop
+            </a>
+          </li>
         </ul>
       </nav>
     </>
