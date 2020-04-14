@@ -7,7 +7,7 @@ import headerStyles from "./header.module.css"
 
 const Header = ({ siteTitle }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [width, setWidth] = useState(window.innerWidth)
+  const [width, setWidth] = useState(breakpoint)
   const breakpoint = 768
 
   useEffect(() => {
