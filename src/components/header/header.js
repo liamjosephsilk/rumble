@@ -30,11 +30,9 @@ const Header = ({ siteTitle }) => {
         </div>
       </Link>
 
-      <Media queries={{ mobile: { minWidth: 768 } }}>
+      <Media queries={{ mobile: { maxWidth: 600 } }}>
         {matches =>
           matches.mobile ? (
-            <Nav />
-          ) : (
             <button
               className={headerStyles.mobilebutton}
               onClick={() => setIsOpen(true)}
@@ -43,6 +41,8 @@ const Header = ({ siteTitle }) => {
               <span className={headerStyles.mobilebutton__span}></span>
               <span className={headerStyles.mobilebutton__span}></span>
             </button>
+          ) : (
+            <Nav />
           )
         }
       </Media>
