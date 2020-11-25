@@ -13,7 +13,7 @@ export default function Template({ data }) {
     <Layout>
       <section>
         <h1 className={blogStyles.title}>{frontmatter.title}</h1>
-        <h2 className={blogStyles.date}>{frontmatter.date}</h2>
+        <p className={blogStyles.date}>{frontmatter.date}</p>
         <article
           className={blogStyles.post}
           dangerouslySetInnerHTML={{ __html: html }}

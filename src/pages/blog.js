@@ -28,13 +28,17 @@ const Blog = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <h1>Blog</h1>
+      <h1>Articles</h1>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <section>
           <h2>
-            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+            <Link style={{ color: "inherit" }} to={node.fields.slug}>
+              {node.frontmatter.title}
+            </Link>
           </h2>
-          <h3>{node.frontmatter.date}</h3>
+          <h3 style={{ fontSize: "0.8rem", color: "#999999" }}>
+            {node.frontmatter.date}
+          </h3>
         </section>
       ))}
     </Layout>

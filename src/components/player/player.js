@@ -1,5 +1,5 @@
 import React from "react"
-import { useRef, useState, useEffect } from "react"
+import { useRef, useState } from "react"
 
 import playerStyles from "./player.module.css"
 

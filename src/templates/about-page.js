@@ -1,7 +1,8 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import Creators from "../components/creators/creators"
 
 const AboutPage = ({ data }) => {
   const { markdownRemark, allMarkdownRemark } = data
@@ -11,8 +12,13 @@ const AboutPage = ({ data }) => {
     <Layout>
       <h1>{frontmatter.title}</h1>
       <div>About Page</div>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <h1>{node.frontmatter.name}</h1>
+      {allMarkdownRemark.edges.map(({ node }) => (
+        <div>
+          <Creators
+            name={node.frontmatter.name}
+            image={node.frontmatter.profilePicture.childImageSharp.fluid}
+          />
+        </div>
       ))}
     </Layout>
   )
@@ -34,7 +40,13 @@ export const aboutPageAndCreators = graphql`
           id
           frontmatter {
             name
-            description
+            profilePicture {
+              childImageSharp {
+                fluid(maxWidth: 200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
