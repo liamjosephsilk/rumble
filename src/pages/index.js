@@ -15,7 +15,6 @@ const IndexPage = () => {
             id
             pubDate
             itunes {
-              author
               summary
               image
             }
