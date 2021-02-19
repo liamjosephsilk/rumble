@@ -3,7 +3,7 @@ templateKey: blog-post
 title: >-
   Announcement - Zine - The Untold, Unpublished and Unfinished comics of the
   Ultimate Universe
-date: 2020-03-31T14:14:45.656Z
+date: 2021-02-19T10:29:17.789Z
 description: COMING SOON!
 ---
 
