@@ -30,7 +30,7 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Episodes" />
       <h1>Episodes</h1>
       {data.allFeedComicBoxRumble.edges.map(({ node }) => (
         <Player data={node} key={node.id} id={node.id} />

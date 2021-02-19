@@ -27,7 +27,10 @@ const Blog = () => {
   `)
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO
+        title="Articles"
+        description="Comic Box Rumble articles on the latest comic book and pop culture goodness"
+      />
       <h1>Articles</h1>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <section>

@@ -10,7 +10,7 @@ const Creators = props => {
       <div className={creatorsStyle.image_container}>
         <Img fluid={image} width="200px" height="200px" />
       </div>
-      <div>
+      <div className={creatorsStyle.copy}>
         <h1>{name}</h1>
         <p>{description}</p>
       </div>

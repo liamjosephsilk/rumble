@@ -7,7 +7,7 @@ import MobileNav from "./mobileNav"
 
 import headerStyles from "./header.module.css"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <header className={headerStyles.container}>

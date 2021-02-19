@@ -4,6 +4,8 @@
   margin-bottom: 1rem;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: solid 2px rgb(243, 243, 243);
 }
 
 .player {
@@ -59,6 +61,21 @@ button {
 
 .button__image {
   margin: 0;
+}
+
+.summary {
+  padding-right: 40px;
+}
+
+.playButton {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: none;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
