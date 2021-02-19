@@ -17,6 +17,7 @@ const AboutPage = ({ data }) => {
           <Creators
             name={node.frontmatter.name}
             image={node.frontmatter.profilePicture.childImageSharp.fluid}
+            description={node.frontmatter.description}
           />
         </div>
       ))}
@@ -31,6 +32,7 @@ export const aboutPageAndCreators = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        description
       }
       html
     }
@@ -40,6 +42,7 @@ export const aboutPageAndCreators = graphql`
           id
           frontmatter {
             name
+            description
             profilePicture {
               childImageSharp {
                 fluid(maxWidth: 200) {

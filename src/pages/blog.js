@@ -34,6 +34,7 @@ const Blog = () => {
           <h2>
             <Link style={{ color: "inherit" }} to={node.fields.slug}>
               {node.frontmatter.title}
+              <p>{node.fields.slug}</p>
             </Link>
           </h2>
           <h3 style={{ fontSize: "0.8rem", color: "#999999" }}>
