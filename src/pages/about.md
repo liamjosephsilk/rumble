@@ -3,4 +3,4 @@ templateKey: about-page
 title: About
 ---
 
-The about page
+The about page is this one
