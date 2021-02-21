@@ -1,0 +1,28 @@
+.btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #222;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.btn__nobg {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.btn,
+.btn__nobg :hover {
+  cursor: pointer;
+}

@@ -1,7 +1,8 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 import blogStyles from "./blogpost.module.css"
 
@@ -11,6 +12,7 @@ export default function Template({ data }) {
 
   return (
     <Layout>
+      <SEO title={frontmatter.title} description={frontmatter.description} />
       <section>
         <h1 className={blogStyles.title}>{frontmatter.title}</h1>
         <p className={blogStyles.date}>{frontmatter.date}</p>

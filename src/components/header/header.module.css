@@ -68,10 +68,10 @@ a {
 .mobilebutton__span {
   box-sizing: border-box;
   display: block;
-  width: 20px;
-  height: 2px;
+  width: 34px;
+  height: 3px;
   background: black;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .mobilenav {
@@ -92,23 +92,24 @@ a {
   flex-direction: column;
   justify-content: space-between;
   list-style: none;
-  height: 50%;
+  height: 40%;
 }
 
 .mobilenav ul li {
   font-size: 4rem;
   width: 100%;
+  text-align: center;
 }
 
 .buttonclose {
   color: white;
-  height: 25px;
-  width: 25px;
+  height: 34px;
+  width: 34px;
   background: none;
   border: none;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
 }
 
 .buttonclose:focus {
@@ -118,8 +119,8 @@ a {
 .buttonclose__span {
   box-sizing: border-box;
   display: block;
-  width: 20px;
-  height: 2px;
+  width: 34px;
+  height: 3px;
   background: black;
   transform: rotate(45deg);
   position: absolute;

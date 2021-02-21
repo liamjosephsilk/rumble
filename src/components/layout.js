@@ -8,6 +8,8 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { MediaProvider } from "../context/media/mediaProvider"
+import MediaPlayer from "./mediaPlayer/mediaPlayer"
 
 import Header from "./header/header"
 import Footer from "./footer/footer"

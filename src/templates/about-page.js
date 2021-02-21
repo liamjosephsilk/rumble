@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
+import aboutStyles from "../pages/styles/about.module.css"
 import Creators from "../components/creators/creators"
 
 const AboutPage = ({ data }) => {
@@ -10,13 +12,15 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <h1>{frontmatter.title}</h1>
-      <div>About Page</div>
+      <SEO title={frontmatter.title} />
+      <h1 className={aboutStyles.heading}>{frontmatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: `${html}` }}></div>
       {allMarkdownRemark.edges.map(({ node }) => (
         <div>
           <Creators
             name={node.frontmatter.name}
             image={node.frontmatter.profilePicture.childImageSharp.fluid}
+            description={node.frontmatter.description}
           />
         </div>
       ))}
@@ -31,6 +35,7 @@ export const aboutPageAndCreators = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        description
       }
       html
     }
@@ -40,6 +45,7 @@ export const aboutPageAndCreators = graphql`
           id
           frontmatter {
             name
+            description
             profilePicture {
               childImageSharp {
                 fluid(maxWidth: 200) {
