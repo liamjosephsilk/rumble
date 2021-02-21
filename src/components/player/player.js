@@ -3,32 +3,20 @@ import { useRef, useState } from "react"
 
 import playerStyles from "./player.module.css"
 
-import play from "../../images/play.svg"
-import pause from "../..//images/pause.svg"
+import { useMediaContext } from "../../context/media/mediaProvider"
 
 const Player = props => {
   const { data, id } = props
-  const audio = useRef()
-  const [playing, setPlaying] = useState(false)
+  const { setRef, ref, media, setMedia, setOpen, open } = useMediaContext()
 
-  function start() {
-    setPlaying(true)
-    audio.current.play()
-  }
-
-  function stop() {
-    setPlaying(false)
-    audio.current.pause()
+  function start(id) {
+    setRef(id)
+    setMedia(data)
+    setOpen(true)
   }
 
   return (
     <div className={playerStyles.container}>
-      <audio
-        src={data.enclosure.url}
-        data-id={id}
-        ref={audio}
-        preload="none"
-      ></audio>
       <div className={playerStyles.player}>
         <div>
           <img
@@ -38,22 +26,16 @@ const Player = props => {
             loading="lazy"
           />
         </div>
-        <div className={playerStyles.buttons}>
-          {playing ? (
-            <button onClick={stop} className={playerStyles.button}>
-              <img src={pause} alt="" />
-            </button>
-          ) : (
-            <button onClick={start} className={playerStyles.button}>
-              <img src={play} className={playerStyles.button__image} alt="" />
-            </button>
-          )}
-        </div>
       </div>
 
       <div className={playerStyles.information}>
         <h2 className={playerStyles.title}>{data.title}</h2>
         <p className={playerStyles.summary}>{data.itunes.summary}</p>
+      </div>
+      <div>
+        <button onClick={() => start(data.id)}>
+          {data.id === ref ? "playing" : "not playing"}
+        </button>
       </div>
     </div>
   )

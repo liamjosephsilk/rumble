@@ -4,8 +4,10 @@ import Player from "../components/player/player"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { useMediaContext } from "../context/media/mediaProvider"
 
 const IndexPage = () => {
+  const { ref } = useMediaContext()
   const data = useStaticQuery(graphql`
     query ComicBoxData {
       allFeedComicBoxRumble {
@@ -32,6 +34,8 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Episodes" />
       <h1>Episodes</h1>
+      <p>{ref}</p>
+
       {data.allFeedComicBoxRumble.edges.map(({ node }) => (
         <Player data={node} key={node.id} id={node.id} />
       ))}
