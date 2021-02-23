@@ -37,6 +37,7 @@ const MobileNav = props => {
         <button
           className={headerStyles.buttonclose}
           onClick={() => handleClick()}
+          aria-label="Close Menu"
         >
           <span className={headerStyles.buttonclose__span}></span>
           <span className={headerStyles.buttonclose__span}></span>

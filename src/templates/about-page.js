@@ -19,7 +19,9 @@ const AboutPage = ({ data }) => {
         <div>
           <Creators
             name={node.frontmatter.name}
-            image={node.frontmatter.profilePicture.childImageSharp.fluid}
+            image={
+              node.frontmatter.profilePicture.childImageSharp.gatsbyImageData
+            }
             description={node.frontmatter.description}
           />
         </div>
@@ -48,9 +50,11 @@ export const aboutPageAndCreators = graphql`
             description
             profilePicture {
               childImageSharp {
-                fluid(maxWidth: 200) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  width: 1000
+                  layout: CONSTRAINED
+                )
               }
             }
           }

@@ -5,17 +5,30 @@ module.exports = {
 
     NEW EPISODES EVERY MONDAY OR SUE US!!!!`,
     author: `Comic Box Rumble`,
+    siteUrl: `https://cocky-franklin-98ceee.netlify.app/`,
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-rss-feed`,
       options: {
         url: `https://feeds.soundcloud.com/users/soundcloud:users:378794924/sounds.rss`,
         name: `ComicBoxRumble`,
+        parserOption: {
+          customFields: {
+            images: ["itunes:image"],
+          },
+        },
       },
     },
-
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: `FeedComicBoxRumble`,
+        imagePath: `itunes.image`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -68,6 +81,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        policy: [{ userAgent: "*", disallow: ["/admin/"] }],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

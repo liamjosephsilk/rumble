@@ -1,5 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import creatorsStyle from "./creators.module.css"
 
@@ -8,7 +8,7 @@ const Creators = props => {
   return (
     <div className={creatorsStyle.container}>
       <div className={creatorsStyle.image_container}>
-        <Img fluid={image} width="200px" height="200px" />
+        <GatsbyImage image={image} width="1000px" height="1000px" />
       </div>
       <div className={creatorsStyle.copy}>
         <h1>{name}</h1>

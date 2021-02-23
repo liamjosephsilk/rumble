@@ -16,7 +16,15 @@ const IndexPage = () => {
             pubDate
             itunes {
               summary
-              image
+            }
+            localImage {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  width: 800
+                  layout: CONSTRAINED
+                )
+              }
             }
             enclosure {
               type

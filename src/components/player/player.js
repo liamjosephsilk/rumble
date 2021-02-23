@@ -2,6 +2,7 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlay } from "@fortawesome/free-solid-svg-icons"
 import AudioPlaying from "../audioPlaying/audioPlaying"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import playerStyles from "./player.module.css"
 
@@ -9,7 +10,9 @@ import { useMediaContext } from "../../context/media/mediaProvider"
 
 const Player = props => {
   const { data } = props
+  console.log(data)
   const { setRef, ref, setMedia, setOpen } = useMediaContext()
+  const image = data.itunes.image
 
   function start(id) {
     setRef(id)
@@ -20,11 +23,19 @@ const Player = props => {
   return (
     <div className={playerStyles.container}>
       <div className={playerStyles.player}>
-        <div>
-          <img
+        <div className={playerStyles.imageContainer}>
+          {/* <img
             src={data.itunes.image}
             className={playerStyles.image}
             alt=""
+            loading="lazy"
+          /> */}
+          {/* <StaticImage src={image} /> */}
+          <GatsbyImage
+            image={data.localImage.childImageSharp.gatsbyImageData}
+            alt={data.title}
+            width="200px"
+            height="200px"
             loading="lazy"
           />
         </div>
@@ -35,7 +46,11 @@ const Player = props => {
         <p className={playerStyles.summary}>{data.itunes.summary}</p>
       </div>
       <div>
-        <button className={playerStyles.btn} onClick={() => start(data.id)}>
+        <button
+          className={playerStyles.btn}
+          onClick={() => start(data.id)}
+          aria-label="Play Episode"
+        >
           {data.id === ref ? (
             <AudioPlaying />
           ) : (
