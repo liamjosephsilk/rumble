@@ -10,9 +10,7 @@ import { useMediaContext } from "../../context/media/mediaProvider"
 
 const Player = props => {
   const { data } = props
-  console.log(data)
   const { setRef, ref, setMedia, setOpen } = useMediaContext()
-  const image = data.itunes.image
 
   function start(id) {
     setRef(id)
@@ -24,13 +22,6 @@ const Player = props => {
     <div className={playerStyles.container}>
       <div className={playerStyles.player}>
         <div className={playerStyles.imageContainer}>
-          {/* <img
-            src={data.itunes.image}
-            className={playerStyles.image}
-            alt=""
-            loading="lazy"
-          /> */}
-          {/* <StaticImage src={image} /> */}
           <GatsbyImage
             image={data.localImage.childImageSharp.gatsbyImageData}
             alt={data.title}
