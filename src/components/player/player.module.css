@@ -13,6 +13,19 @@
   height: fit-content;
 }
 
+.btn {
+  color: #222222;
+  background: none;
+  height: 50px;
+  width: 50px;
+  outline: none;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
 .buttons {
   position: absolute;
   top: 0;

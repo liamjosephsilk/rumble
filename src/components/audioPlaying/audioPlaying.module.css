@@ -1,0 +1,49 @@
+.playing {
+  width: fit-content;
+  height: 15px;
+  width: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.playingBar {
+  display: inline-block;
+  background: black;
+  width: 7px;
+  height: 100%;
+  animation: up-and-down 1.3s ease infinite alternate;
+  border-radius: 1px;
+}
+
+.bar0 {
+  height: 60%;
+}
+
+.bar1 {
+  height: 30%;
+  animation-delay: -2.4s;
+}
+
+.bar2 {
+  height: 75%;
+  animation-delay: -3.7s;
+}
+
+@keyframes up-and-down {
+  10% {
+    height: 30%;
+  }
+  30% {
+    height: 100%;
+  }
+  60% {
+    height: 50%;
+  }
+  80% {
+    height: 75%;
+  }
+  100% {
+    height: 20%;
+  }
+}

@@ -1,0 +1,19 @@
+/* .title {
+  height: 100%;
+  width: 40%;
+  margin: 0;
+} */
+
+.title {
+  margin: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 1000px) {
+}

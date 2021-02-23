@@ -1,13 +1,15 @@
 import React from "react"
-import { useRef, useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faPlay } from "@fortawesome/free-solid-svg-icons"
+import AudioPlaying from "../audioPlaying/audioPlaying"
 
 import playerStyles from "./player.module.css"
 
 import { useMediaContext } from "../../context/media/mediaProvider"
 
 const Player = props => {
-  const { data, id } = props
-  const { setRef, ref, media, setMedia, setOpen, open } = useMediaContext()
+  const { data } = props
+  const { setRef, ref, setMedia, setOpen } = useMediaContext()
 
   function start(id) {
     setRef(id)
@@ -33,8 +35,12 @@ const Player = props => {
         <p className={playerStyles.summary}>{data.itunes.summary}</p>
       </div>
       <div>
-        <button onClick={() => start(data.id)}>
-          {data.id === ref ? "playing" : "not playing"}
+        <button className={playerStyles.btn} onClick={() => start(data.id)}>
+          {data.id === ref ? (
+            <AudioPlaying />
+          ) : (
+            <FontAwesomeIcon icon={faPlay} />
+          )}
         </button>
       </div>
     </div>
