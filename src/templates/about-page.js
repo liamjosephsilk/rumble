@@ -22,6 +22,7 @@ const AboutPage = ({ data }) => {
             image={
               node.frontmatter.profilePicture.childImageSharp.gatsbyImageData
             }
+            key={node.id}
             description={node.frontmatter.description}
           />
         </div>

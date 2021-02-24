@@ -10,7 +10,6 @@ const MediaPlayer = () => {
   const { media, setDuration, setCurrentTime } = useMediaContext()
   const [isPlaying, setIsPlaying] = useState(false)
   const [muted, setMuted] = useState(false)
-  let interval = null
 
   const audio = useRef()
 
@@ -35,7 +34,6 @@ const MediaPlayer = () => {
     if (playback === "pause") {
       current.pause()
       setIsPlaying(false)
-      clearInterval(interval)
     } else {
       current.play()
       setIsPlaying(true)
@@ -46,9 +44,6 @@ const MediaPlayer = () => {
     setDuration(formatTime(duration))
     setIsPlaying(true)
     audio.current.play()
-    interval = setInterval(() => {
-      setCurrentTime(formatTime(audio.current.currentTime))
-    }, 1000)
 
     if ((audio.current.muted = true)) {
       audio.current.muted = false
@@ -64,6 +59,9 @@ const MediaPlayer = () => {
             src={media.enclosure.url}
             onCanPlayThrough={() => autoPlay(audio.current.duration)}
             ref={audio}
+            onTimeUpdate={() =>
+              setCurrentTime(formatTime(audio.current.currentTime))
+            }
           ></audio>
           <div className={MediaPlayerStyles.info}>
             <PlayerTitle title={media.title} />
