@@ -2,18 +2,18 @@ import React, { useRef, useState } from "react"
 
 import MediaPlayerStyles from "./media.module.css"
 import MediaButton from "../mediaButton/mediaButton"
-import Time from "../time/time"
+import TimeContainer from "../time/timeContainer"
+import PlayerTitle from "../playerTitle/playerTitle"
 import { useMediaContext } from "../../context/media/mediaProvider"
 
 const MediaPlayer = () => {
-  const { media, open } = useMediaContext()
-  const [isPLaying, setIsPlaying] = useState(false)
-  const [duration, setDuration] = useState(null)
-  const [currentTime, setCurrentTime] = useState(null)
+  const { media, setDuration, setCurrentTime } = useMediaContext()
+  const [isPlaying, setIsPlaying] = useState(false)
   const [muted, setMuted] = useState(false)
   let interval = null
 
   const audio = useRef()
+
   function formatTime(timeInSeconds) {
     const result = new Date(timeInSeconds * 1000).toISOString().substr(11, 8)
 
@@ -24,25 +24,22 @@ const MediaPlayer = () => {
     }
   }
 
-  function mute() {
-    setMuted(true)
-    audio.current.muted = true
+  function handleMuted(muteBoolean) {
+    setMuted(muteBoolean)
+    audio.current.muted = muteBoolean
   }
 
-  function unMute() {
-    setMuted(false)
-    audio.current.muted = false
-  }
+  function handlePlayback(playback, audio) {
+    const current = audio
 
-  function play() {
-    audio.current.play()
-    setIsPlaying(true)
-  }
-
-  function pause() {
-    audio.current.pause()
-    setIsPlaying(false)
-    clearInterval(interval)
+    if (playback === "pause") {
+      current.pause()
+      setIsPlaying(false)
+      clearInterval(interval)
+    } else {
+      current.play()
+      setIsPlaying(true)
+    }
   }
 
   function autoPlay(duration) {
@@ -59,67 +56,43 @@ const MediaPlayer = () => {
     }
   }
 
-  if (media === null) {
-    return null
-  }
-  if (media !== null && open === true) {
+  if (media !== null) {
     return (
       <div className={MediaPlayerStyles.mediaplayer}>
-        <div className={MediaPlayerStyles.info}>
+        <div className={MediaPlayerStyles.container}>
           <audio
             src={media.enclosure.url}
-            ref={audio}
             onCanPlayThrough={() => autoPlay(audio.current.duration)}
+            ref={audio}
           ></audio>
-
-          <div className={MediaPlayerStyles.title}>
-            <p>{media.title}</p>
+          <div className={MediaPlayerStyles.info}>
+            <PlayerTitle title={media.title} />
           </div>
-
-          {isPLaying ? (
-            <MediaButton type="pause" handleAction={() => pause()} />
-          ) : (
-            <MediaButton type="play" handleAction={() => play()} />
-          )}
-          {duration && currentTime ? (
-            <div className={MediaPlayerStyles.time}>
-              <div>
-                <Time
-                  hours={currentTime.hours}
-                  minutes={currentTime.minutes}
-                  seconds={currentTime.seconds}
-                />
-                <span className={MediaPlayerStyles.divider}>|</span>
-                <Time
-                  hours={duration.hours}
-                  minutes={duration.minutes}
-                  seconds={duration.seconds}
-                />
-              </div>
-              <div className={MediaPlayerStyles.sidebar}>
-                {muted ? (
-                  <MediaButton type="muted" handleAction={() => unMute()} />
-                ) : (
-                  <MediaButton type="notmute" handleAction={() => mute()} />
-                )}
-              </div>
-            </div>
-          ) : (
-            <div className={MediaPlayerStyles.time}>
-              <div>
-                <Time />
-                <span className={MediaPlayerStyles.divider}>|</span>
-                <Time />
-              </div>
-              <div className={MediaPlayerStyles.sidebar}>
-                {muted ? (
-                  <MediaButton type="muted" handleAction={() => unMute()} />
-                ) : (
-                  <MediaButton type="notmute" handleAction={() => mute()} />
-                )}
-              </div>
-            </div>
-          )}
+          <div className={MediaPlayerStyles.actions}>
+            {isPlaying ? (
+              <MediaButton
+                type="pause"
+                handleAction={() => handlePlayback("pause", audio.current)}
+              />
+            ) : (
+              <MediaButton
+                type="play"
+                handleAction={() => handlePlayback("play", audio.current)}
+              />
+            )}
+            <TimeContainer />
+            {muted ? (
+              <MediaButton
+                type="muted"
+                handleAction={() => handleMuted(false)}
+              />
+            ) : (
+              <MediaButton
+                type="notmute"
+                handleAction={() => handleMuted(true)}
+              />
+            )}
+          </div>
         </div>
       </div>
     )

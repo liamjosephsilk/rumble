@@ -8,9 +8,26 @@
   border-bottom: solid 2px rgb(243, 243, 243);
 }
 
+.imageContainer {
+  width: 100%;
+}
+
 .player {
   position: relative;
   height: fit-content;
+}
+
+.btn {
+  color: #222222;
+  background: none;
+  height: 50px;
+  width: 50px;
+  outline: none;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 .buttons {
@@ -84,10 +101,10 @@ button {
     margin-bottom: 1rem;
     align-items: center;
   }
-  .image {
+  .imageContainer {
     width: 200px;
-    height: 200px;
   }
+
   .information {
     width: 65%;
   }
@@ -99,6 +116,7 @@ button {
     transition: 300ms ease-in-out;
     height: 96.5%;
   }
+
   .buttons:hover {
     opacity: 0.6;
     cursor: pointer;

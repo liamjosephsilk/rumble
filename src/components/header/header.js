@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import Media from "react-media"
 
@@ -25,6 +25,7 @@ const Header = () => {
             <button
               className={headerStyles.mobilebutton}
               onClick={() => setIsOpen(true)}
+              aria-label="Open Menu"
             >
               <span className={headerStyles.mobilebutton__span}></span>
               <span className={headerStyles.mobilebutton__span}></span>
