@@ -1,6 +1,7 @@
 import React from "react"
 import { useMediaContext } from "../../context/media/mediaProvider"
 import Time from "./time"
+import TimeStyles from "./time.module.css"
 
 const TimeContainer = () => {
   const { currentTime, duration } = useMediaContext()
@@ -12,7 +13,7 @@ const TimeContainer = () => {
           minutes={currentTime.minutes}
           seconds={currentTime.seconds}
         />
-        <span>|</span>
+        <span className={TimeStyles.divider}>|</span>
         <Time
           hours={duration.hours}
           minutes={duration.minutes}
@@ -23,7 +24,7 @@ const TimeContainer = () => {
   return (
     <div>
       <Time />
-      <span>|</span>
+      <span className={TimeStyles.divider}>|</span>
       <Time />
     </div>
   )
