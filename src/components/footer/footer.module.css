@@ -1,7 +1,7 @@
 .footer {
   background: #222222;
   color: white;
-  padding: 2rem;
+  padding: 2rem 0;
   margin-top: 4rem;
 }
 
@@ -9,4 +9,80 @@
   width: 92%;
   max-width: 960px;
   margin: 0 auto;
+  min-height: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation h3 {
+  font-weight: 900;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+}
+
+.navigation .links {
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #222222;
+  width: fit-content;
+  transition: all 250ms ease-in-out;
+}
+
+.navigation .links:hover {
+  border-color: white;
+}
+
+.container .logo {
+  color: #222222;
+  background: white;
+  width: fit-content;
+  margin: 0;
+  padding: 0.1rem 0.3rem;
+  line-height: 1;
+
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.container .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .build {
+  font-size: 0.8rem;
+}
+
+.container .build a {
+  border-bottom: 1px solid white;
+  margin: 0 3px;
+  padding: 0.1rem 0.3rem;
+  background: white;
+  color: #222222;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .navigation h3 {
+    display: none;
+  }
+
+  .container .build {
+    font-size: 0.6rem;
+  }
+  .container {
+    min-height: 200px;
+  }
 }
