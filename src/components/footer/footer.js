@@ -33,9 +33,12 @@ const Footer = () => {
           <Link to="/" className={footerStyles.links}>
             Episodes
           </Link>
-          <Link to="" className={footerStyles.links}>
+          <a
+            href="https://gumroad.com/rumblecomics/follow"
+            className={footerStyles.links}
+          >
             Shop
-          </Link>
+          </a>
         </nav>
       </section>
     </footer>
